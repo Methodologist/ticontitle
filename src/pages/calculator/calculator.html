@@ -1,0 +1,310 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Closing Cost Calculator
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<ion-list>
+    <form [formGroup]="form" (ngSubmit)="submitForm(form.value)">
+        <p>{{ form.value | json }}</p>
+      <ion-item>
+        <ion-label floating>Purchase Price</ion-label>
+        <ion-input type="text" formControlName="purPrice"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Mortgage Amount</ion-label>
+        <ion-input type="text" formControlName="moAmount"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Single Family Residence</ion-label>
+        <ion-toggle formControlName="chsinglefam"></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Condominium</ion-label>
+        <ion-toggle formControlName="chcondo"></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Real Estate Commission</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+        
+      <ion-list>
+          <ion-item>
+            <ion-label floating>Commission</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+
+            <ion-list radio-group *ngFor="let commissionOwner of CommissionOwners; let i = index">
+              <ion-item>
+                <ion-label>{{ commissionOwner }}</ion-label>
+                <ion-radio type="radio" formControlName="i" [checked]="value === commissionOwner"></ion-radio>
+              </ion-item>
+            </ion-list>
+        </ion-list>
+        
+      <ion-item>
+        <ion-label floating>Total Mortgage Fees</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+        <ion-list radio-group>
+          <ion-item>
+            <ion-label>Buyer</ion-label>
+            <ion-radio checked="true" value="buyer"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Seller</ion-label>
+            <ion-radio value="seller"></ion-radio>
+          </ion-item>
+        </ion-list>
+
+      <ion-item>
+        <ion-label floating>Settlement Fee</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+        <ion-list radio-group>
+          <ion-item>
+            <ion-label>Buyer</ion-label>
+            <ion-radio checked="true" value="buyer"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Seller</ion-label>
+            <ion-radio value="seller"></ion-radio>
+          </ion-item>
+        </ion-list>
+
+      <ion-item>
+        <ion-label floating>Owner's Policy</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+        <ion-list radio-group>
+          <ion-item>
+            <ion-label>Buyer</ion-label>
+            <ion-radio checked="true" value="buyer"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Seller</ion-label>
+            <ion-radio value="seller"></ion-radio>
+          </ion-item>
+        </ion-list>
+
+      <ion-item>
+        <ion-label floating>Title Search</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+        <ion-list radio-group>
+          <ion-item>
+            <ion-label>Buyer</ion-label>
+            <ion-radio checked="true" value="buyer"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Seller</ion-label>
+            <ion-radio value="seller"></ion-radio>
+          </ion-item>
+        </ion-list>
+
+      <ion-item>
+        <ion-label floating>Lenders Policy</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+        <ion-list radio-group>
+          <ion-item>
+            <ion-label>Buyer</ion-label>
+            <ion-radio checked="true" value="buyer"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Seller</ion-label>
+            <ion-radio value="seller"></ion-radio>
+          </ion-item>
+        </ion-list>
+
+      <ion-item>
+        <ion-label floating>Condo Association Fee</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+        <ion-list radio-group>
+          <ion-item>
+            <ion-label>Buyer</ion-label>
+            <ion-radio checked="true" value="buyer"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Seller</ion-label>
+            <ion-radio value="seller"></ion-radio>
+          </ion-item>
+        </ion-list>
+
+      <ion-item>
+        <ion-label floating>Environmental Endorsement</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+        <ion-list radio-group>
+          <ion-item>
+            <ion-label>Buyer</ion-label>
+            <ion-radio checked="true" value="buyer"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Seller</ion-label>
+            <ion-radio value="seller"></ion-radio>
+          </ion-item>
+        </ion-list>
+
+      <ion-item>
+        <ion-label floating>Florida Form 9</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+        <ion-list radio-group>
+          <ion-item>
+            <ion-label>Buyer</ion-label>
+            <ion-radio checked="true" value="buyer"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Seller</ion-label>
+            <ion-radio value="seller"></ion-radio>
+          </ion-item>
+        </ion-list>
+
+      <ion-item>
+        <ion-label floating>Recording</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+        <ion-list radio-group>
+          <ion-item>
+            <ion-label>Buyer</ion-label>
+            <ion-radio checked="true" value="buyer"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Seller</ion-label>
+            <ion-radio value="seller"></ion-radio>
+          </ion-item>
+        </ion-list>
+
+      <ion-item>
+        <ion-label floating>Doc Stamp on Mortgage</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+        <ion-list radio-group>
+          <ion-item>
+            <ion-label>Buyer</ion-label>
+            <ion-radio checked="true" value="buyer"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Seller</ion-label>
+            <ion-radio value="seller"></ion-radio>
+          </ion-item>
+        </ion-list>
+
+      <ion-item>
+        <ion-label floating>Intangible Tax on Mortgage</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+        <ion-list radio-group>
+          <ion-item>
+            <ion-label>Buyer</ion-label>
+            <ion-radio checked="true" value="buyer"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Seller</ion-label>
+            <ion-radio value="seller"></ion-radio>
+          </ion-item>
+        </ion-list>
+
+      <ion-item>
+        <ion-label floating>Doc Stamp on Deed</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+        <ion-list radio-group>
+          <ion-item>
+            <ion-label>Buyer</ion-label>
+            <ion-radio value="buyer"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Seller</ion-label>
+            <ion-radio checked="true" value="seller"></ion-radio>
+          </ion-item>
+        </ion-list>
+
+      <ion-item>
+        <ion-label floating>Survey</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+        <ion-list radio-group>
+          <ion-item>
+            <ion-label>Buyer</ion-label>
+            <ion-radio checked="true" value="buyer"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Seller</ion-label>
+            <ion-radio value="seller"></ion-radio>
+          </ion-item>
+        </ion-list>
+
+      <ion-item>
+        <ion-label floating>Termite</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+        <ion-list radio-group>
+          <ion-item>
+            <ion-label>Buyer</ion-label>
+            <ion-radio checked="true" value="buyer"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Seller</ion-label>
+            <ion-radio value="seller"></ion-radio>
+          </ion-item>
+        </ion-list>
+        
+      <ion-item>
+        <ion-label floating>Buyer Total</ion-label>
+        
+      </ion-item>
+        <p></p>
+        <ion-item>
+          <ion-note>
+            Seller Total: {{ form.value.purprice }}
+          </ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-note item-left>
+            Buyer Total: {{ form.value.btotal }}
+          </ion-note>
+        </ion-item>
+        
+      <button type="submit" ion-button full>Calculate</button>
+    </form>
+    
+</ion-list>
+</ion-content>
