@@ -19,46 +19,46 @@ export class CalculatorPage {
             commper: ['', Validators.required],
             commission: ['', Validators.required],
             misccharge: ['', Validators.required],
-            miscfee: ['', Validators.required],
+            miscFee: ['', Validators.required],
             chsinglefam: [true, Validators.required],
             chcondo: [false, Validators.required],
-            settfee: ['', Validators.required],
-            titleins: ['', Validators.required],
-            tsearch: ['', Validators.required],
-            lenpolicy: ['', Validators.required],
-            condopud: ['', Validators.required],
-            envend: ['', Validators.required],
-            fform9: ['', Validators.required],
+            settleFee: ['', Validators.required],
+            ownPolicy: ['', Validators.required],
+            titSearch: ['', Validators.required],
+            lendPolicy: ['', Validators.required],
+            condoAssFee: ['', Validators.required],
+            envEndsorse: ['', Validators.required],
+            flForm9: ['', Validators.required],
             recording: ['', Validators.required],
-            stampmort: ['', Validators.required],
-            inttax: ['', Validators.required],
-            stampdeed: ['', Validators.required],
-            surveyfee: ['', Validators.required],
-            termitefee: ['', Validators.required],
-            btotal: ['', Validators.required],
-            stotal: ['', Validators.required],
-            commissionOwner: ['Buyer', 'Seller']
+            docStampMort: ['', Validators.required],
+            intTaxMort: ['', Validators.required],
+            docStampDeed: ['', Validators.required],
+            surveyFee: ['', Validators.required],
+            termiteFee: ['', Validators.required],
+            buyTotal: ['', Validators.required],
+            sellTotal: ['', Validators.required],
+            commissionOwner: 'seller',
+            miscFeeOwner: 'buyer',
+            settleFeeOwner: 'buyer',
+            ownPolicyOwner: 'buyer',
+            titSearchOwner: 'buyer',
+            lendPolicyOwner: 'buyer',
+            condoAssFeeOwner: 'buyer',
+            envEndsorseOwner: 'buyer',
+            flForm9Owner: 'buyer',
+            recordingOwner: 'buyer',
+            docStampMortOwner: 'buyer',
+            intTaxMortOwner: 'buyer',
+            docStampDeedOwner: 'seller',
+            surveyFeeOwner: 'buyer',
+            termiteFeeOwner: 'buyer'
         });
   }
   
   submitForm(value: any):void{
-    value.total = Number(value.purPrice) + Number(value.moAmount);
-    var totalpolicy = 0;
-    var x = 0;
-    var y = 0;
-
-    if (value.moAmount == ""){
-        value.moAmount = 0;
-    } else {
-    value.moAmount = value.moAmount;
-    }
     
-    if (value.commper != "") {
-        value.commper = value.commper;
-        value.commission = value.purPrice * value.commper / 100;
-    }
     
     console.log('Reactive Form Data: ')
-    console.log(Number(value.total));
+    console.log(Number(value.buyTotal));
   }
 }

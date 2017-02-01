@@ -41,10 +41,15 @@
             <ion-input type="text"></ion-input>
           </ion-item>
 
-            <ion-list radio-group *ngFor="let commissionOwner of CommissionOwners; let i = index">
+            <ion-list radio-group formControlName="commissionOwner">
               <ion-item>
-                <ion-label>{{ commissionOwner }}</ion-label>
-                <ion-radio type="radio" formControlName="i" [checked]="value === commissionOwner"></ion-radio>
+                <ion-label>Buyer</ion-label>
+                <ion-radio value="buyer"></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>Seller</ion-label>
+                <ion-radio value="seller"></ion-radio>
               </ion-item>
             </ion-list>
         </ion-list>
@@ -54,10 +59,10 @@
         <ion-input type="text"></ion-input>
       </ion-item>
 
-        <ion-list radio-group>
+        <ion-list radio-group formControlName="miscFeeOwner">
           <ion-item>
             <ion-label>Buyer</ion-label>
-            <ion-radio checked="true" value="buyer"></ion-radio>
+            <ion-radio value="buyer"></ion-radio>
           </ion-item>
 
           <ion-item>
@@ -68,13 +73,13 @@
 
       <ion-item>
         <ion-label floating>Settlement Fee</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" formControlName="settleFee"></ion-input>
       </ion-item>
 
-        <ion-list radio-group>
+        <ion-list radio-group formControlName="settleFeeOwner">
           <ion-item>
             <ion-label>Buyer</ion-label>
-            <ion-radio checked="true" value="buyer"></ion-radio>
+            <ion-radio value="buyer"></ion-radio>
           </ion-item>
 
           <ion-item>
@@ -85,13 +90,13 @@
 
       <ion-item>
         <ion-label floating>Owner's Policy</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" formControlName="ownPolicy"></ion-input>
       </ion-item>
 
-        <ion-list radio-group>
+        <ion-list radio-group formControlName="ownPolicyOwner">
           <ion-item>
             <ion-label>Buyer</ion-label>
-            <ion-radio checked="true" value="buyer"></ion-radio>
+            <ion-radio value="buyer"></ion-radio>
           </ion-item>
 
           <ion-item>
@@ -102,10 +107,10 @@
 
       <ion-item>
         <ion-label floating>Title Search</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" formControlName="titSearch">></ion-input>
       </ion-item>
 
-        <ion-list radio-group>
+        <ion-list radio-group formControlName="titSearchOwner">
           <ion-item>
             <ion-label>Buyer</ion-label>
             <ion-radio checked="true" value="buyer"></ion-radio>
@@ -119,10 +124,10 @@
 
       <ion-item>
         <ion-label floating>Lenders Policy</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" formControlName="lendPolicy"></ion-input>
       </ion-item>
 
-        <ion-list radio-group>
+        <ion-list radio-group formControlName="lendPolicyOwner">
           <ion-item>
             <ion-label>Buyer</ion-label>
             <ion-radio checked="true" value="buyer"></ion-radio>
@@ -136,13 +141,13 @@
 
       <ion-item>
         <ion-label floating>Condo Association Fee</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" formControlName="condoAssFee"></ion-input>
       </ion-item>
 
-        <ion-list radio-group>
+        <ion-list radio-group formControlName="condoAssFeeOwner">
           <ion-item>
             <ion-label>Buyer</ion-label>
-            <ion-radio checked="true" value="buyer"></ion-radio>
+            <ion-radio value="buyer"></ion-radio>
           </ion-item>
 
           <ion-item>
@@ -153,13 +158,13 @@
 
       <ion-item>
         <ion-label floating>Environmental Endorsement</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" formControlName="envEndsorse"></ion-input>
       </ion-item>
 
-        <ion-list radio-group>
+        <ion-list radio-group formControlName="envEndsorseOwner">
           <ion-item>
             <ion-label>Buyer</ion-label>
-            <ion-radio checked="true" value="buyer"></ion-radio>
+            <ion-radio value="buyer"></ion-radio>
           </ion-item>
 
           <ion-item>
@@ -170,13 +175,13 @@
 
       <ion-item>
         <ion-label floating>Florida Form 9</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" formControlName="flForm9"></ion-input>
       </ion-item>
 
-        <ion-list radio-group>
+        <ion-list radio-group formControlName="flForm9Owner">
           <ion-item>
             <ion-label>Buyer</ion-label>
-            <ion-radio checked="true" value="buyer"></ion-radio>
+            <ion-radio value="buyer"></ion-radio>
           </ion-item>
 
           <ion-item>
@@ -187,13 +192,13 @@
 
       <ion-item>
         <ion-label floating>Recording</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" formControlName="recording"></ion-input>
       </ion-item>
 
-        <ion-list radio-group>
+        <ion-list radio-group formControlName="recordingOwner">
           <ion-item>
             <ion-label>Buyer</ion-label>
-            <ion-radio checked="true" value="buyer"></ion-radio>
+            <ion-radio value="buyer"></ion-radio>
           </ion-item>
 
           <ion-item>
@@ -204,13 +209,13 @@
 
       <ion-item>
         <ion-label floating>Doc Stamp on Mortgage</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" formControlName="docStampMort"></ion-input>
       </ion-item>
 
-        <ion-list radio-group>
+        <ion-list radio-group formControlName="docStampMortOwner">
           <ion-item>
             <ion-label>Buyer</ion-label>
-            <ion-radio checked="true" value="buyer"></ion-radio>
+            <ion-radio value="buyer"></ion-radio>
           </ion-item>
 
           <ion-item>
@@ -221,13 +226,13 @@
 
       <ion-item>
         <ion-label floating>Intangible Tax on Mortgage</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" formControlName="intTaxMort"></ion-input>
       </ion-item>
 
-        <ion-list radio-group>
+        <ion-list radio-group formControlName="intTaxMortOwner">
           <ion-item>
             <ion-label>Buyer</ion-label>
-            <ion-radio checked="true" value="buyer"></ion-radio>
+            <ion-radio value="buyer"></ion-radio>
           </ion-item>
 
           <ion-item>
@@ -238,10 +243,10 @@
 
       <ion-item>
         <ion-label floating>Doc Stamp on Deed</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" formControlName="docStampDeed"></ion-input>
       </ion-item>
 
-        <ion-list radio-group>
+        <ion-list radio-group formControlName="docStampDeedOwner">
           <ion-item>
             <ion-label>Buyer</ion-label>
             <ion-radio value="buyer"></ion-radio>
@@ -249,19 +254,19 @@
 
           <ion-item>
             <ion-label>Seller</ion-label>
-            <ion-radio checked="true" value="seller"></ion-radio>
+            <ion-radio value="seller"></ion-radio>
           </ion-item>
         </ion-list>
 
       <ion-item>
         <ion-label floating>Survey</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" formControlName="surveyFee"></ion-input>
       </ion-item>
 
-        <ion-list radio-group>
+        <ion-list radio-group formControlName="surveyFeeOwner">
           <ion-item>
             <ion-label>Buyer</ion-label>
-            <ion-radio checked="true" value="buyer"></ion-radio>
+            <ion-radio value="buyer"></ion-radio>
           </ion-item>
 
           <ion-item>
@@ -272,13 +277,13 @@
 
       <ion-item>
         <ion-label floating>Termite</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" formControlName="termiteFee"></ion-input>
       </ion-item>
 
-        <ion-list radio-group>
+        <ion-list radio-group formControlName="termiteFeeOwner">
           <ion-item>
             <ion-label>Buyer</ion-label>
-            <ion-radio checked="true" value="buyer"></ion-radio>
+            <ion-radio value="buyer"></ion-radio>
           </ion-item>
 
           <ion-item>
@@ -294,12 +299,12 @@
         <p></p>
         <ion-item>
           <ion-note>
-            Seller Total: {{ form.value.purprice }}
+            Seller Total: {{ form.value.sellTotal }}
           </ion-note>
         </ion-item>
         <ion-item>
           <ion-note item-left>
-            Buyer Total: {{ form.value.btotal }}
+            Buyer Total: {{ form.value.buyTotal }}
           </ion-note>
         </ion-item>
         
