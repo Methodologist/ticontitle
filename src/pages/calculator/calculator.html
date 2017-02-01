@@ -31,14 +31,14 @@
       </ion-item>
 
       <ion-item>
-        <ion-label floating>Real Estate Commission</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-label floating>Real Estate Commission %</ion-label>
+        <ion-input type="text" formControlName="commper"></ion-input>
       </ion-item>
         
       <ion-list>
           <ion-item>
             <ion-label floating>Commission</ion-label>
-            <ion-input type="text"></ion-input>
+            <ion-input type="text" formControlName="commission"></ion-input>
           </ion-item>
 
             <ion-list radio-group formControlName="commissionOwner">
@@ -56,10 +56,10 @@
         
       <ion-item>
         <ion-label floating>Total Mortgage Fees</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" formControlName="totMortFee"></ion-input>
       </ion-item>
 
-        <ion-list radio-group formControlName="miscFeeOwner">
+        <ion-list radio-group formControlName="totMortFeeOwner">
           <ion-item>
             <ion-label>Buyer</ion-label>
             <ion-radio value="buyer"></ion-radio>
@@ -291,12 +291,7 @@
             <ion-radio value="seller"></ion-radio>
           </ion-item>
         </ion-list>
-        
-      <ion-item>
-        <ion-label floating>Buyer Total</ion-label>
-        
-      </ion-item>
-        <p></p>
+
         <ion-item>
           <ion-note>
             Seller Total: {{ form.value.sellTotal }}
