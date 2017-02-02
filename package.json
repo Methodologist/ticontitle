@@ -10,7 +10,7 @@
     "ionic:serve": "ionic-app-scripts serve"
   },
   "engines": {
-  "node": "5.9.1"
+	"node": "7.4.0"
   },
   "dependencies": {
     "@angular/common": "2.2.1",
@@ -46,8 +46,8 @@
   "cordovaPlatforms": [],
   "description": "ticontitle: An Ionic project",
   "keywords": [
-  "node",
-  "heroku",
-  "express"
-  ],
+    "node",
+    "heroku",
+    "express"
+  ]
 }
