@@ -10,7 +10,7 @@
     "ionic:serve": "ionic-app-scripts serve"
   },
   "engines": {
-  "node": "7.4.0"
+  "node": "5.9.1"
   },
   "dependencies": {
     "@angular/common": "2.2.1",
