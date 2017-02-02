@@ -36,10 +36,11 @@
       </ion-item>
         
       <ion-list>
-          <ion-item>
-            <ion-label floating>Commission</ion-label>
-            <ion-input type="text" formControlName="commission"></ion-input>
-          </ion-item>
+            <ion-item>
+              <ion-note color="primary">
+                Commission {{ form.value.commission | currency }}
+              </ion-note>
+            </ion-item>
 
             <ion-list radio-group formControlName="commissionOwner">
               <ion-item>
@@ -293,16 +294,15 @@
         </ion-list>
 
         <ion-item>
-          <ion-note>
-            Seller Total: {{ form.value.sellTotal }}
+          <ion-note item-left  color="primary">
+            Buyer Total: {{ form.value.buyTotal | currency }}
           </ion-note>
         </ion-item>
         <ion-item>
-          <ion-note item-left>
-            Buyer Total: {{ form.value.buyTotal }}
+          <ion-note  color="primary">
+            Seller Total: {{ form.value.sellTotal | currency }}
           </ion-note>
         </ion-item>
-        
       <button type="submit" ion-button full>Calculate</button>
     </form>
     
