@@ -9,6 +9,9 @@
     "ionic:build": "ionic-app-scripts build",
     "ionic:serve": "ionic-app-scripts serve"
   },
+  "engines": {
+  "node": "7.4.0"
+  },
   "dependencies": {
     "@angular/common": "2.2.1",
     "@angular/compiler": "2.2.1",
@@ -41,5 +44,10 @@
     "ionic-plugin-keyboard"
   ],
   "cordovaPlatforms": [],
-  "description": "ticontitle: An Ionic project"
+  "description": "ticontitle: An Ionic project",
+  "keywords": [
+  "node",
+  "heroku",
+  "express"
+  ],
 }
