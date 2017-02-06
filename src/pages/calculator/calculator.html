@@ -1,6 +1,7 @@
 <ion-header>
   <ion-navbar color="primary">
     <ion-title>
+        <img src="assets/img/logo.png">
       Closing Cost Calculator
     </ion-title>
   </ion-navbar>
@@ -9,7 +10,6 @@
 <ion-content padding>
 <ion-list>
     <form [formGroup]="form" (ngSubmit)="submitForm(form.value)">
-        <p>{{ form.value | json }}</p>
       <ion-item>
         <ion-label floating>Purchase Price</ion-label>
         <ion-input type="text" formControlName="purPrice"></ion-input>

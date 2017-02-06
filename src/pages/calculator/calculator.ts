@@ -1,7 +1,6 @@
 import { Component, Inject } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
-import { ReactiveFormsModule, AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'page-calculator',
