@@ -4,7 +4,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'page-calculator',
-  templateUrl: 'calculator.html'
+  templateUrl: 'calculator.html',
+  styles: ['.center { text-align:center; padding-bottom: 2px; }']
 })
 
 export class CalculatorPage {
